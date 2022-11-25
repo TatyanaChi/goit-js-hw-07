@@ -4,15 +4,15 @@ import { galleryItems } from "./gallery-items.js";
 console.log(galleryItems);
 
 const galleryContainer = document.querySelector(".gallery");
-const cardsMarkUp = createGalleryCardsMarkUp(galleryItems);
+const cardsMarkUp = createGalleryCardsMarkup(galleryItems);
 
 galleryContainer.insertAdjacentHTML("beforeend", cardsMarkUp);
 
 galleryContainer.addEventListener("click", onGalleryContainerClick);
 
-console.log(createGalleryCardsMarkUp(galleryItems));
+console.log(createGalleryCardsMarkup(galleryItems));
 
-function createGalleryCardsMarkUp(galleryItems) {
+function createGalleryCardsMarkup(galleryItems) {
   return galleryItems
     .map(({ preview, original, description }) => {
       return `
